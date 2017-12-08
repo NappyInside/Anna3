@@ -1,0 +1,150 @@
+/* ************************************ */
+/* *************** BODY *************** */
+/* ************************************ */
+body {
+	background-color: #f4f4f5;
+	background-image: url(../img/fond.jpg);
+	background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    background-position:center;
+	font-family : roboto,calibri,arial;
+}
+
+table, td, th {
+	border:1px solid #FF6600;
+	padding-bottom: 0.6em;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	
+}
+
+table, footer, header {
+	margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+}
+
+th {
+	font-weight:bold;
+	text-align: center;
+}
+
+td {
+	text-align: left;
+	text-shadow: -1px -1px #3C5A56, -3px 0 4px #3C5A56;
+	text-align:center;
+	
+}
+
+header {
+	font-size: 32px;
+	
+}
+h1
+{
+  font-size: 32px;
+  text-shadow: -1px -1px #3C5A56, -3px 0 4px #3C5A56;
+  color: #3C5A56;
+  padding:16px;
+  font-weight:lighter;
+  -moz-box-shadow: 2px 2px 6px #888;  
+  -webkit-box-shadow: 2px 2px 6px #888;  
+  box-shadow:2px 2px 6px #888;  
+  text-align:center;
+  display:block;
+  margin:16px; 
+}
+
+h3 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+    font-size: 20px;
+    text-align:center;
+}
+
+
+footer {
+	margin: left;
+	position: fixed;
+	bottom: 0;
+	width: 35%;
+	font-weight:bold;
+}
+
+/* ************************************ */
+/* ********** MENU INFERIEUR ********** */
+/* ************************************ */
+nav {
+	position: fixed;
+	width: 50%;
+	bottom: 0;
+}
+nav button {
+	position: fixed;
+	left: 50%;
+	margin-left: -1.2em;
+	bottom: -1.75em;
+	padding-bottom: 1em;
+	height: 3.5em;
+	width: 3.5em;
+	
+	border: 0;
+	border-radius: 50%;
+	
+	cursor: pointer;
+	
+	color: #7EABCE;
+	text-align: center;
+	font-size: 1.8em;
+	
+	background-color: #ffffff;
+}
+nav ul {
+	visibility: hidden;
+	list-style: none;
+	box-shadow: 6px 6px 6px #aaaaaa ; 
+	
+	position: fixed;
+	left: 50%;
+	margin-left: -15em;
+	bottom: 0;
+	padding: 0;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin-bottom: 0;
+	
+	border: 0;
+	border-radius: 1em 1em 0 0;
+	
+	color: #ffffff;
+	text-align: center;
+	font-size: 1.6em;
+	
+	background-color: #7EABCE;
+}
+nav ul #nav-arrow {
+	position: fixed;
+	
+	bottom: 1.4em;
+	margin-left: 6.25em;
+}
+nav ul #nav-ul-li-center {
+	width: 1.5em;
+}
+nav ul #nav-ul-li-center:hover {
+	background-color: #7EABCE;
+}
+nav ul li {
+	display: inline-block;
+	
+	padding: 0.75em;
+}
+nav ul li:hover {
+	background-color: #9DCAEC;
+}
+nav ul li a {
+	color: #ffffff;
+	text-decoration: none;
+}
