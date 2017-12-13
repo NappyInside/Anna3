@@ -6,7 +6,7 @@
 	 */
 	class FileManager {
 
-		/*public*/ const PROJECT_PATH = 'C:\\Users\\aminiscloux\\Downloads\\UwAmp\\UwAmp\\www\\anna2\\';
+		/*public*/ const PROJECT_PATH = 'C:\\wamp64\\www\\Anna3-dev-cfai\\';
 
 		/**
 		 * Retourne le chemin du contrôleur demandé

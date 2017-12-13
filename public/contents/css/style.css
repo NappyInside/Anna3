@@ -1,8 +1,102 @@
 .form-signin-heading {
-	
-    left: 0;
-    right: 0;
-    height: 80px;
-    line-height: 80px;
-    background-color: #222222;
+	left: 0;
+	right: 0;
+	height: 80px;
+	line-height: 80px;
+/*	background-color: #FFFAF0;*/
+	text-align: center;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+body {
+	background-color:#fff;
+	-webkit-font-smoothing: antialiased;
+	font: normal 14px Roboto,arial,sans-serif;
+}
+
+
+.form-login {
+	background-color: #EDEDED;
+	padding-top: 10px;
+	padding-bottom: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+	border-radius: 15px;
+	border-color:#d2d2d2;
+	border-width: 10px;
+	box-shadow:0 1px 0 #cfcfcf;
+}
+
+.col-md-offset-3, .col-md-6 {
+	padding-top: 150px;
+}
+
+h4 { 
+	border:0 solid #fff; 
+	border-bottom-width:1px;
+	padding-bottom:10px;
+	text-align: center;
+	padding-top: 15px;
+	font: normal 28px Roboto,arial,sans-serif;
+}
+
+h1 {
+	font: bold 55px Roboto,arial,sans-serif;
+	text-align: center;
+	text-decoration: underline;
+	padding-bottom:30px;
+}
+
+h3 {
+	font: italic 28px Roboto,arial,sans-serif;
+	text-align: center;
+}
+
+.form-control {
+	border-radius: 10px;
+	text-align: center;
+}
+
+.wrapper {
+	text-align: center;
+}
+
+.mastfoot {
+	text-align: right;
+}
+
+.bg, .bg-filter {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+.bg-filter {
+	z-index: -99;
+	opacity: 0.2;
+	background: -webkit-linear-gradient(rgba(49, 224, 247, 1) 0%, rgba(90, 77, 184, 1) 100%);
+	background: -moz-linear-gradient(rgba(49, 224, 247, 1) 0%, rgba(90, 77, 184, 1) 100%);
+	background: -o-linear-gradient(rgba(49, 224, 247, 1) 0%, rgba(90, 77, 184, 1) 100%);
+	background: linear-gradient(rgba(49, 224, 247, 1) 0%, rgba(90, 77, 184, 1) 100%);
+}
+.intro-text {
+	width: 50%;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	position: absolute;
+}
+
+.table {
+	margin : 0 auto;
+}
+
+.radio {
+	text-align: center;
 }
