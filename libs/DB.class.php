@@ -1,17 +1,17 @@
 <?php
 	namespace libs;
 	use \PDO;
-	
+
 	/**
 	 * Gestion des requêtes et de la connexion à la base de donnée basé sur le design pattern Singleton
 	 */
 	final class DB {
-		
+
 		/*private*/ const DB_HOST = 'localhost';
 		/*private*/ const DB_NAME = 'anna';
 		/*private*/ const DB_USER = 'root';
 		/*private*/ const DB_PASSWORD = 'root';
-		
+
 		private static $_db;
 
 		/**
@@ -21,17 +21,17 @@
 		 */
 		private static function init()
 		{
-			try 
+			try
 			{
 				self::$_db = new PDO('mysql:host='. self::DB_HOST .';dbname='. self::DB_NAME .';charset=utf8', self::DB_USER, self::DB_PASSWORD, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 			}
-			catch(PDOException $e) 
+			catch(PDOException $e)
 			{
 				echo $e->getMessage();
 				die();
 			}
 		}
-		
+
 		/**
 		 * Convertit tous les caractères éligibles en entités HTML
 		 *
@@ -46,10 +46,10 @@
 				if(gettype($param) == 'string')
 					$param = htmlentities(addslashes($param));
 			}
-			
+
 			return $params;
 		}
-		
+
 		/**
 		 * Execution d'une requête vers la base de donnée
 		 *
@@ -64,15 +64,15 @@
 			{
 				self::init();
 			}
-			
+
 			if($params !== null)
 			{
 				$params = self::format($params);
 			}
-			
+
 			$req = self::$_db->prepare($request);
 			$req->execute($params);
-			
+
 			return $req;
 		}
 

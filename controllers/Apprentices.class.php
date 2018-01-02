@@ -29,9 +29,9 @@
 			if(\libs\http\Request::postExists('ajouter'))
 			{
 				$params = array(
-						'idOption' => \libs\http\Request::postData('option'), 
-						'lastName' => \libs\http\Request::postData('nom'), 
-						'firstName' => \libs\http\Request::postData('prenom'), 
+						'idOption' => \libs\http\Request::postData('option'),
+						'lastName' => \libs\http\Request::postData('nom'),
+						'firstName' => \libs\http\Request::postData('prenom'),
 						'email' => \libs\http\Request::postData('email')
 					);
 				$apprentice = new \models\Apprentice($params);
@@ -56,10 +56,10 @@
 			if(\libs\http\Request::postExists('modifier'))
 			{
 				$params = array(
-						'idApprentice' => \libs\http\Request::postData('id'), 
-						'idOption' => \libs\http\Request::postData('option'), 
-						'lastName' => \libs\http\Request::postData('nom'), 
-						'firstName' => \libs\http\Request::postData('prenom'), 
+						'idApprentice' => \libs\http\Request::postData('id'),
+						'idOption' => \libs\http\Request::postData('option'),
+						'lastName' => \libs\http\Request::postData('nom'),
+						'firstName' => \libs\http\Request::postData('prenom'),
 						'email' => \libs\http\Request::postData('email')
 					);
 				$apprentice = new \models\Apprentice($params);
@@ -107,24 +107,18 @@
 		 */
 		public function actionCsv()
 		{
-			if(\libs\http\Request::postExists('fichier'))
-			{	var_dump ($_SERVER);
-				$file = fopen($_FILES['fichier']['tmp_name'],'r');
-
-				while(($data = fgetcsv($file, 1000, ",")) !== FALSE)
-				{
-					$params = array(
-						'idApprentice' => \libs\http\Request::postData('id_apprentice')
-						);
-
-					$apprentice = new \models\Apprentice($params);
-
-					\persistences\Apprentice::delete($apprentice);
-				}
-				fclose($file);
-				\libs\http\Response::redirect('?ctrl=apprentices');
+			if(!empty($_POST['fichier'])) {
+				\libs\DB::query("LOAD DATA INFILE 'C:/Users/Anthony - Nathalie/Documents/test.csv'
+							INTO TABLE apprentices
+							FIELDS
+							TERMINATED BY ';'
+							ENCLOSED BY '\\\"'
+							ESCAPED BY '\\\\'
+						LINES
+							STARTING BY ''
+							TERMINATED BY '\\n'
+				");
 			}
-
 			$this->_view->setFile('apprentices/csv');
 			$this->_view->setTitle('Importer des apprentis');
 		}

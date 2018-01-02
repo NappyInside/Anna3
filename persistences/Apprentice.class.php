@@ -48,9 +48,9 @@
 		public static function insert(\models\Apprentice &$apprentice)
 		{
 			$params = array(
-					$apprentice->getIdOption(), 
-					$apprentice->getFirstName(), 
-					$apprentice->getLastName(), 
+					$apprentice->getIdOption(),
+					$apprentice->getFirstName(),
+					$apprentice->getLastName(),
 					$apprentice->getEmail()
 				);
 
@@ -62,10 +62,10 @@
 		public static function update(\models\Apprentice &$apprentice)
 		{
 			$params = array(
-					$apprentice->getIdOption(), 
-					$apprentice->getFirstName(), 
-					$apprentice->getLastName(), 
-					$apprentice->getEmail(), 
+					$apprentice->getIdOption(),
+					$apprentice->getFirstName(),
+					$apprentice->getLastName(),
+					$apprentice->getEmail(),
 					$apprentice->getIdApprentice()
 				);
 
