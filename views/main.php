@@ -39,11 +39,11 @@
    <div class = "collapse navbar-collapse" id = "navbarNav">
 
       <ul class = "nav navbar-nav mr-auto">
-         <li class="nav-item active"><a class="nav-link" href = "http://localhost:81/Anna3-dev-cfai/public/index.php">Accueil</a></li>
-         <li class="nav-item"><a class="nav-link" href="http://localhost:81/Anna3-dev-cfai/public/index.php?ctrl=formers">Formateurs </a></li>
-         <li class="nav-item"><a class="nav-link" href="http://localhost:81/Anna3-dev-cfai/public/index.php?ctrl=apprentices">Apprentis </a></li>
-         <li class="nav-item"><a class="nav-link" href="http://localhost:81/Anna3-dev-cfai/public/index.php?ctrl=marks">Notes </a></li>
-         <li class="nav-item"><a class="nav-link" href="http://localhost:81/Anna3-dev-cfai/public/index.php?ctrl=authentification&action=disconnect">Déconnexion </a></li>
+         <li class="nav-item active"><a class="nav-link" href = "http://localhost/Anna3/public/index.php">Accueil</a></li>
+         <li class="nav-item"><a class="nav-link" href="http://localhost/Anna3/public/index.php?ctrl=formers">Formateurs </a></li>
+         <li class="nav-item"><a class="nav-link" href="http://localhost/Anna3/public/index.php?ctrl=apprentices">Apprentis </a></li>
+         <li class="nav-item"><a class="nav-link" href="http://localhost/Anna3/public/index.php?ctrl=marks">Notes </a></li>
+         <li class="nav-item"><a class="nav-link" href="http://localhost/Anna3/public/index.php?ctrl=authentification&action=disconnect">Déconnexion </a></li>
       </ul>
 <!--    </div> -->
 

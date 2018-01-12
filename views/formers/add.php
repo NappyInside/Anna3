@@ -35,7 +35,7 @@
 	</div><br>
 	<div class="wrapper">
 		<span class="group-btn">
-			<button class="btn btn-danger btn-md" onclick="window.location.replace('http://localhost:81/Anna3-dev-cfai/public/index.php?ctrl=formers')" value="Annuler">Annuler</button>
+			<button class="btn btn-danger btn-md" onclick="window.location.replace('http://localhost/Anna3/public/index.php?ctrl=formers')" value="Annuler">Annuler</button>
 		</span>
 	</div>
 </form>
