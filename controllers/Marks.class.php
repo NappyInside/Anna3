@@ -27,7 +27,7 @@
 			if(\libs\http\Request::postExists('validateMark'))
 			{
 				$params = array(
-						'idApprentice' => \libs\http\Request::postData('idApprentice'), 
+						'idApprentice' => \libs\http\Request::postData('idApprentice'),
 						'idFormer' => \libs\http\Request::sessionData('id_former'), 
 						'idTest' => \libs\http\Request::postData('idTest'), 
 						'mark' => \libs\http\Request::postData('mark'),
@@ -55,7 +55,6 @@
 					);
 
 				$mark = new \models\Mark($params);
-
 				\persistences\Mark::delete($mark);
 			}
 

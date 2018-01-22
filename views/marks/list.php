@@ -84,7 +84,7 @@
 
 		</form>
 
-	</form>
+	</form><hr />
 
 	<h1>Récapitulatif des notes des candidats</h1>
 
@@ -94,7 +94,10 @@
 			<!-- Entête de tableau -->
 			<thead class="thead-default">
 				<tr>
+					<th>ID du candidat</th>
 					<th>Nom du candidat</th>
+					<th>Prénom du candidat</th>
+					<th>ID du formateur</th>
 					<th>Nom du formateur</th>
 					<th>Numéro de l'épreuve</th>
 					<th>Note obtenue</th>
@@ -103,24 +106,29 @@
 				</tr>
 			</thead>
 
+
 			<!-- Parcours de la liste des notes pour affichage -->
 			<?php foreach($datas['marks'] as $mark): ?>
 				<tr>
 					<td><?=$mark->getIdApprentice(); ?></td>
+					<td><?=$mark->getFirstName(); ?></td>
+					<td><?=$mark->getLastName(); ?></td>
 					<td><?=$mark->getIdFormer(); ?></td>
+					<td><?=$mark->getName(); ?></td>
 					<td><?=$mark->getIdTest(); ?></td>
 					<td><?=$mark->getMark(); ?></td>
 					<td><?=$mark->getComment(); ?></td>
 					<td>
 						<!-- Bouton supprimer note, redirige vers méthode supprimer -->
-						<input type="submit" class="button btn btn-danger btn-md" data-toggle="modal" data-target="#fen_modal" value="Supprimer"/>
+						<input type="submit" class="button btn btn-danger btn-md" data-toggle="modal" data-target="#fen_modal_<?=$mark->getIdApprentice(); ?>" value="Supprimer" />
+
 						<form action="?ctrl=marks&action=supprimer" method="POST">
 							<!-- Fenêtre modale -->
-							<div class="modal fade" id="fen_modal" tabindex="-1" role="dialog" aria-hidden="true">
+							<div class="modal fade" id="fen_modal_<?=$mark->getIdApprentice(); ?>" tabindex="-1" role="dialog" aria-hidden="true">
 								<div class="modal-dialog" role="document">
 									<div class="modal-content">
 										<div class="modal-header">
-											<h5 class="modal-title" id="fen_modal">Confirmation</h5>
+											<h5 class="modal-title" id="fen_modal_<?=$mark->getIdApprentice(); ?>">Confirmation</h5>
 											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
@@ -131,8 +139,9 @@
 										<div class="modal-footer">
 											<input required type="hidden" value='<?=$mark->getIdApprentice(); ?>' name="id_apprentice" />
 											<input required type="hidden" value='<?=$mark->getIdFormer(); ?>' name="id_former" />
-											<input type="submit" class="button btn btn-danger btn-md" value="Supprimer"/>
+											<input type="submit" name="supprimer" class="button btn btn-danger btn-md" value="Supprimer"/>
 											<button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+
 										</div>
 									</div>
 								</div>

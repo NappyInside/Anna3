@@ -33,14 +33,14 @@
 				</td>
 				<td>
 					<!-- Bouton supprimer formateur, redirige vers méthode supprimer -->
-					<input type="submit" class="button btn btn-danger btn-md" data-toggle="modal" data-target="#fen_modal" value="Supprimer"/>
+					<input type="submit" class="button btn btn-danger btn-md" data-toggle="modal" data-target="#fen_modal_<?=$former->getIdFormer(); ?>" value="Supprimer"/>
 					<form action="?ctrl=formers&action=delete" method="POST">
 						<!-- Fenêtre modale -->
-						<div class="modal fade" id="fen_modal" tabindex="-1" role="dialog" aria-hidden="true">
+						<div class="modal fade" id="fen_modal_<?=$former->getIdFormer(); ?>"" tabindex="-1" role="dialog" aria-hidden="true">
 							<div class="modal-dialog" role="document">
 								<div class="modal-content">
 									<div class="modal-header">
-										<h5 class="modal-title" id="fen_modal">Confirmation</h5>
+										<h5 class="modal-title" id="fen_modal_<?=$former->getIdFormer(); ?>"">Confirmation</h5>
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 											<span aria-hidden="true">&times;</span>
 										</button>

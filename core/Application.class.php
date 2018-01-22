@@ -43,6 +43,7 @@
 				{
 					\libs\http\Response::redirect('?ctrl=marks');
 				}
+
 			}
 			else
 			{

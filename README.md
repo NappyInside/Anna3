@@ -12,5 +12,5 @@ ANNA est une application permettant la saisie des notes des étudiants du BTS SI
 
 # $salt = 'K8G9KDZ'
 
-Voir sur la modif Former reprise de l'idFormer existant et non création, contrôle à effectuer
+Voir sur la modification Former reprise de l'idFormer existant et non création, contrôle à effectuer
 Fichier csv à créer à la racine + changement de chemin

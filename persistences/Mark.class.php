@@ -16,12 +16,15 @@
 			{
 				$params = array(
 						'idApprentice' => $mark['id_apprentice'],
+						'firstName' => $mark['first_name'],
+						'lastName' => $mark['last_name'],
 						'idFormer' => $mark['id_former'],
 						'idTest' => $mark['id_test'],
 						'mark' => $mark['mark'],
 						'comment' => $mark['comment'],
 						'published' => $mark['published']
 					);
+				
 				$marksObj[] = new \models\Mark($params);
 			}
 
@@ -35,11 +38,13 @@
 			$params = array(
 						'idApprentice' => $mark['id_apprentice'],
 						'idFormer' => $mark['id_former'],
+						'name' => $mark['name'],
 						'idTest' => $mark['id_test'],
 						'mark' => $mark['mark'],
 						'comment' => $mark['comment'],
 						'published' => $mark['published']
 					);
+			var_dump($params);
 			$marksObj = new \models\Mark($params);
 
 			return $marksObj;
