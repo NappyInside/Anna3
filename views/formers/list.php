@@ -1,14 +1,7 @@
-<h1>Liste des formateurs</h1>
-
-<div class="row">
-<!-- Bouton ajouter nouvel formateur, redirige vers méthode ajouter -->
-<form  action="?ctrl=formers&action=add" method="post">
-	<input type="submit" class="button btn btn-info btn-md" value="Nouveau"/>
-</form></div>
-
 <!-- Tableau responsive avec bordure et hover -->
 <div class="container-fluid table-responsive col-lg-8">
 	<table class="table table-hover">
+		<caption><h1>Liste des formateurs</h1></caption>
 		<!-- Entête de tableau -->
 		<thead class="thead-default">
 			<tr>
@@ -63,4 +56,11 @@
 		<?php endforeach; ?>
 
 	</table>
-</div>
+
+	<div class="row">
+
+		<!-- Bouton ajouter nouvel formateur, redirige vers méthode ajouter -->
+		<form  action="?ctrl=formers&action=add" method="post">
+			<input type="submit" class="button btn btn-info btn-md" value="Nouveau"/>
+		</form></div>
+	</div>

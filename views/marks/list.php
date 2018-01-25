@@ -5,32 +5,12 @@
 <style>
 
 </style>
-<!-- <div class="site-wrapper">
-	<div class="site-wrapper-inner">
-
-		<div class="cover-container">
-			<div class="masthead clearfix">
-				<div class="inner">
-					<h3 class="masthead-brand">Interface des notes</h3>
-					<nav>
-						<ul class="nav masthead-nav">
-							<li class="active"><a href="http://localhost/my-app/anna/public/index.php?ctrl=formers">Formateurs</a></li>
-							<li><a href="http://localhost/my-app/anna/public/index.php?ctrl=apprentices">Apprentis</a></li>
-							<li><a href="http://localhost/my-app/anna/public/index.php?ctrl=authentification&action=disconnect">Déconnexion</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</div>
-</div> -->
-
 
 
 <!-- Bouton ajouter nouvel apprenti, redirige vers méthode ajouter -->
-<form action="?ctrl=marks&action=ajouter" method="post">
+<!-- <form action="?ctrl=marks&action=ajouter" method="post">
 	<input type="submit" class="button btn btn-info btn-md" value="Nouveau"/>
-</form>
+</form> -->
 
 <h1>Interface de notation</h1>
 
@@ -116,6 +96,7 @@
 								<th>Numéro de l'épreuve</th>
 								<th>Note obtenue</th>
 								<th>Commentaire</th>
+								<!-- <th>Modification</th> -->
 								<th>Suppression</th>
 							</tr>
 						</thead>
@@ -132,7 +113,14 @@
 								<td><?=$mark->getIdTest(); ?></td>
 								<td><?=$mark->getMark(); ?></td>
 								<td><?=$mark->getComment(); ?></td>
-								<td>
+<!-- 								<td style="text-align: center;">
+									 Bouton modifier apprenti, redirige vers méthode modifier 
+									<form  action="?ctrl=marks&action=update" method="POST">
+										<input type="hidden" value="<?=$mark->getMark(); ?>" name="id_mark" />
+										<input type="submit" class="button btn btn-warning btn-md" value="Modifier" />
+									</form>
+								</td> -->
+								<td style="text-align: center;">
 									<!-- Bouton supprimer note, redirige vers méthode supprimer -->
 									<input type="submit" class="button btn btn-danger btn-md" data-toggle="modal" data-target="#fen_modal_<?=$mark->getIdApprentice(); ?>" value="Supprimer" />
 

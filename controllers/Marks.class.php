@@ -65,6 +65,41 @@
 			\libs\http\Response::redirect('?ctrl=marks');
 		}
 
+		/**
+		* Modifie une note
+		*/
+		public function actionUpdate()
+		{
+			if(\libs\http\Request::postExists('modifier'))
+			{
+				$params = array(
+						'idApprentice' => \libs\http\Request::postData('idApprentice'),
+						'idFormer' => \libs\http\Request::sessionData('id_former'), 
+						'idTest' => \libs\http\Request::postData('idTest'), 
+						'mark' => \libs\http\Request::postData('mark'),
+						'comment' => \libs\http\Request::postData('comment')
+					);
+				$mark = new \models\Mark($params);
+
+				\persistences\Mark::update($marks);
+
+				\libs\http\Response::redirect('?ctrl=marks');
+			}
+			else if(\libs\http\Request::postExists('mark'))
+			{
+				$datas['marks'] = \persistences\Mark::getById(\libs\http\Request::postData('marks'));
+				$datas['options'] = \persistences\Option::getAll();
+
+				$this->_view->setFile('marks/update');
+				$this->_view->setTitle('Modifier une note');
+				$this->_view->setDatas($datas);
+			}
+			else
+			{
+				\libs\http\Response::redirect('?ctrl=marks');
+			}
+		}
+
 		/*
 		 * Remplir la combo avec les candidats dans la base
 		 */

@@ -98,3 +98,7 @@ h3 {
 .radio {
 	text-align: center;
 }
+
+caption { 
+    caption-side: top;
+}

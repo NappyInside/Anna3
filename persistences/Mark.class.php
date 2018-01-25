@@ -73,6 +73,20 @@
 
 			unset($mark);
 		}
+
+		public static function update(\models\Mark &$mark)
+		{
+			$params = array(
+					$mark->getIdApprentice(),
+					$mark->getIdFormer(),
+					$mark->getIdTest(),
+					$mark->getPublished(),
+					$mark->getMark(),
+					$mark->getComment()
+				);
+
+			\libs\DB::query('UPDATE marks SET id_apprentice = ?, id_former = ?, id_test = ?,published = ?, mark = ?, comment = ? WHERE id_test = ? LIMIT 1', $params);
+		}
 	}
 ?>
 
