@@ -44,7 +44,6 @@
 						'comment' => $mark['comment'],
 						'published' => $mark['published']
 					);
-			var_dump($params);
 			$marksObj = new \models\Mark($params);
 
 			return $marksObj;

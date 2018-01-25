@@ -64,5 +64,27 @@
 
 			\libs\http\Response::redirect('?ctrl=marks');
 		}
+
+		/*
+		 * Remplir la combo avec les candidats dans la base
+		 */
+		public function remplirCombo()
+		{
+			$apprentices = \libs\DB::query('SELECT * FROM apprentices INNER JOIN options ON apprentices.id_option = options.id_option');
+
+			$apprenticesObj = array();
+
+			foreach($apprentices as $apprentice)
+			{
+				$params = array(
+						'idApprentice' => $apprentice['id_apprentice'],
+						'firstName' => $apprentice['first_name'],
+						'lastName' => $apprentice['last_name']
+					);
+				$apprenticesObj[] = new \models\Apprentice($params);
+			}
+
+			return $apprenticesObj;
+		}
 	}
 ?>

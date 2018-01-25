@@ -82,5 +82,26 @@
 
 			unset($apprentice);
 		}
+
+
+		//A FAIRE !!
+/*		public function remplirCombo()
+		{
+			$apprentices = \libs\DB::query('SELECT * FROM apprentices INNER JOIN options ON apprentices.id_option = options.id_option');
+
+			$apprenticesObj = array();
+
+			foreach($apprentices as $apprentice)
+			{
+				$params = array(
+						'idApprentice' => $apprentice['id_apprentice'],
+						'firstName' => $apprentice['first_name'],
+						'lastName' => $apprentice['last_name']
+					);
+				$apprenticesObj[] = new \models\Apprentice($params);
+			}
+
+			return $apprenticesObj;
+		}*/
 	}
 ?>
