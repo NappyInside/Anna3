@@ -56,7 +56,8 @@
 				$params = array(
 						'idFormer' => \libs\http\Request::postData('id'), 
 						'rank' => \libs\http\Request::postData('rang'), 
-						'name' => \libs\http\Request::postData('nom')
+						'name' => \libs\http\Request::postData('nom'),
+						'password' => \libs\http\Request::postData('password')
 					);
 				$former = new \models\Former($params);
 

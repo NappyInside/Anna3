@@ -1,18 +1,20 @@
 <h1>Liste des candidats</h1>
 
+<div class="row">
 <!-- Bouton ajouter nouvel apprenti, redirige vers méthode ajouter -->
 <form action="?ctrl=apprentices&action=add" method="post">
 	<input type="submit" class="button btn btn-info btn-md" value="Nouveau"/>
-</form>
+</form></div>
 
+<div class="row">
 <!-- Bouton import csv, redirige vers méthode  -->
 <form  action="?ctrl=apprentices&action=csv" method="post">
-	<input type="image" src="contents/img/csv.jpg" width="50" height="50">
-</form>
+	<input type="submit" class="button btn btn-success btn-md" value="Importer CSV">
+</form></div>
 
 <!-- Tableau responsive avec bordure et hover -->
-<div class="table-responsive">
-	<table class="table table-bordered table-hover table-condensed">
+<div class="container-fluid table-responsive col-lg-8">
+	<table class="table table-hover">
 		<!-- Entête de tableau -->
 		<thead class="thead-default">
 			<tr>

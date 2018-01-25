@@ -1,19 +1,20 @@
 <h1>Liste des formateurs</h1>
 
+<div class="row">
 <!-- Bouton ajouter nouvel formateur, redirige vers méthode ajouter -->
 <form  action="?ctrl=formers&action=add" method="post">
 	<input type="submit" class="button btn btn-info btn-md" value="Nouveau"/>
-</form>
+</form></div>
 
 <!-- Tableau responsive avec bordure et hover -->
-<div class="table-responsive">
-	<table class="table table-bordered table-hover">
+<div class="container-fluid table-responsive col-lg-8">
+	<table class="table table-hover">
 		<!-- Entête de tableau -->
 		<thead class="thead-default">
 			<tr>
 				<th>Rang</th>
 				<th>Nom</th>
-				<th>Mot de passe</th>
+				<!-- <th>Mot de passe</th> -->
 				<th>Modification</th>
 				<th>Suppression</th>
 			</tr>
@@ -23,7 +24,7 @@
 			<tr>
 				<td><?=ucfirst($former->getRank()); ?></td>
 				<td><?=$former->getName(); ?></td>
-				<td><?=$former->getPassword(); ?></td>
+				<!-- <td><?=$former->getPassword(); ?></td> -->
 				<td>
 					<!-- Bouton modifier formateur, redirige vers méthode modifier -->
 					<form  action="?ctrl=formers&action=update" method="POST">

@@ -25,6 +25,11 @@
 	</div>
 </div> -->
 
+<!-- Bouton ajouter nouvel apprenti, redirige vers méthode ajouter -->
+<form action="?ctrl=marks&action=ajouter" method="post">
+	<input type="submit" class="button btn btn-info btn-md" value="Nouveau"/>
+</form>
+
 <h1>Interface de notation</h1>
 
 <form action="?ctrl=marks&action=ajouter" method="post">
@@ -36,62 +41,59 @@
 	<div class="radio">
 		<label><input required type="radio" name="idTest" value="2">Epreuve E6</label>
 	</div>
-
-<!-- 	<table>
-
-		<tr>
-			<td class="whiteStyle">Epreuve</td>
-			<td class="whiteStyle"><label>E4</label><input required type="radio" name="idTest" value="1"></td>
-			<td class="whiteStyle"><label>E6</label><input required type="radio" name="idTest" value="2"></td>
-		</tr>
-
-	</table> -->
-
-	<hr/>
+<hr class="hr-dashed">
 
 	<h3>Veuillez indiquer le candidat concerné</h3>
-
-	<div class="form-group">
-		<input required type="number" name="idApprentice" id="idApprentice" placeholder="idApprentice" class="form-control">
-	</div>
-	<!-- 	<center><input required type="number" name="idApprentice" placeholder="idApprentice"/></center> -->
-
-	<h3>Note Finale</h3>
-	<div class="form-group">
-		<input required type="number" name="mark" id="mark" placeholder="Note obtenue sur 20" class="form-control">
-	</div>
-
-	<!-- 		<label><input required type="number" step="0.01" min="0" max="20" name="mark"/> /20</label></center> -->
-
-	<hr/>
-
-<!-- 		<center><h3>Commentaires</h3></center>
-		<center><textarea name="comment"></textarea></center>
-
-		<center><input required type="submit" name="validateMark" value="Valider"/></center> -->
-
-		<form role = "form">
-			<h3>Commentaires</h3>
-			<div class = "form-group">
-				<textarea class = "form-control" name="comment" rows = "3" placeholder="Veuillez saisir un commentaire"></textarea>
-				<!-- 				<center><input required type="submit" name="validateMark" value="Valider"></center> -->
+	<div class="row">
+		<!-- Une div vide pour centrer les inputs suivants -->
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4">
+			<div class="form-group">
+				<input required type="number" name="idApprentice" id="idApprentice" placeholder="idApprentice" class="form-control">
 			</div>
-			<div class="wrapper">
-				<span class="group-btn">
-					<button class="btn btn-primary btn-md" required type="submit" name="validateMark">Valider</button>
-				</span>
-			</div>
+		</div></div>
+		<!-- 	<center><input required type="number" name="idApprentice" placeholder="idApprentice"/></center> -->
 
-		</form>
+		<h3>Note Finale</h3>
+		<div class="row">
+			<!-- Une div vide pour centrer les inputs suivants -->
+			<div class="col-lg-4"></div>
+			<div class="col-lg-4">
+				<div class="form-group">
+					<input required type="number" name="mark" id="mark" placeholder="Note obtenue sur 20" class="form-control">
+				</div>
+			</div></div>
+<hr class="hr-dashed">
 
-	</form><hr />
+
+			<form role = "form">
+				<h3>Commentaires</h3>
+				<div class="row">
+					<!-- Une div vide pour centrer les inputs suivants -->
+					<div class="col-lg-4"></div>
+					<div class="col-lg-4">
+						<div class = "form-group">
+							<textarea class = "form-control" name="comment" rows = "3" placeholder="Veuillez saisir un commentaire"></textarea>
+							<!-- 				<center><input required type="submit" name="validateMark" value="Valider"></center> -->
+						</div></div></div>
+						<div class="wrapper">
+							<span class="group-btn">
+								<button class="btn btn-primary btn-md" required type="submit" name="validateMark">Valider</button>
+							</span>
+						</div>
+
+					</form>
+
+				</form><hr class="hr-dashed">
 
 	<h1>Récapitulatif des notes des candidats</h1>
 
 	<!-- Tableau responsive avec bordure et hover -->
-	<div class="table-responsive">
-		<table class="table table-bordered table-hover">
+
+	<div class="container-fluid table-responsive col-lg-8">
+		<table class="table table-hover ">
 			<!-- Entête de tableau -->
+			<caption><h3>Récapitulatif des notes des candidats</h3></caption>
 			<thead class="thead-default">
 				<tr>
 					<th>ID du candidat</th>

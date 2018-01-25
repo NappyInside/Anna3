@@ -40,6 +40,10 @@
 			}
 
 			\libs\http\Response::redirect('?ctrl=marks');
+
+			$this->_view->setFile('marks/ajouter');
+			$this->_view->setTitle('Ajouter une note');
+			$this->_view->setDatas($datas);
 		}
 
 		/**

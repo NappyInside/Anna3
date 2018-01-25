@@ -15,8 +15,8 @@
 
 	<br/><br/>
 	<div class="row">
-		<div class="col-md-3"></div>
-		<div class="col-md-6">
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4">
 			<!-- Champ de saisie qui sera enregistré dans la base de données -->
 			<div class="form-group">
 				<input required type="text" value="" name="nom" placeholder="Nom du Formateur" class="form-control"></br></br>

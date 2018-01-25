@@ -15,6 +15,7 @@
 <!-- Après appui sur Modifier renvoie vers validation_modification.php -->
 <form action="?ctrl=apprentices&action=update" method="POST" />
 <div class="container">
+
 	<h3>Option</h3>
 <!-- Vérifie quelle option est sélectionnée -->
 <?php foreach($datas['options'] as $option): ?>
@@ -25,10 +26,11 @@
 
 
 		<div class="row">
-		<div class="col-md-3"></div>
-		<div class="col-md-6">
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4">
 			<!-- Champ de saisie qui sera enregistré dans la base de données -->
 			<div class="form-group">
+				<input required type="hidden" value="<?=$apprentice->getIdApprentice(); ?>" name="id" placeholder="Id du Candidat" class="form-control"></br>
 				<input required type="text" value="<?=$apprentice->getFirstName(); ?>" name="nom" placeholder="Nom du Candidat" class="form-control"></br>
 				<input required type="text" value="<?=$apprentice->getLastName(); ?>" name="prenom" placeholder="Prénom du Candidat" class="form-control"></br>
 				<input required type="mail" value="<?=$apprentice->getEmail(); ?>" name="email" placeholder="Adresse mail du Candidat" class="form-control">
