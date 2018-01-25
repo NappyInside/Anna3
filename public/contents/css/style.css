@@ -99,6 +99,10 @@ h3 {
 	text-align: center;
 }
 
-caption { 
+caption {
     caption-side: top;
+}
+
+td, th {
+	text-align: center;
 }

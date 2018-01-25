@@ -108,7 +108,7 @@
 		public function actionCsv()
 		{
 			if(!empty($_POST['fichier'])) {
-				\libs\DB::query("LOAD DATA INFILE 'C:/Users/Anthony - Nathalie/Documents/test.csv'
+				\libs\DB::query("LOAD DATA INFILE 'D:/CFAI/UwAmp/www/Anna3/test.csv'
 							INTO TABLE apprentices
 							FIELDS
 							TERMINATED BY ';'

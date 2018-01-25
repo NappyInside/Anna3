@@ -113,14 +113,14 @@
 								<td><?=$mark->getIdTest(); ?></td>
 								<td><?=$mark->getMark(); ?></td>
 								<td><?=$mark->getComment(); ?></td>
-<!-- 								<td style="text-align: center;">
-									 Bouton modifier apprenti, redirige vers méthode modifier 
+<!-- 								<td>
+									 Bouton modifier apprenti, redirige vers méthode modifier
 									<form  action="?ctrl=marks&action=update" method="POST">
 										<input type="hidden" value="<?=$mark->getMark(); ?>" name="id_mark" />
 										<input type="submit" class="button btn btn-warning btn-md" value="Modifier" />
 									</form>
 								</td> -->
-								<td style="text-align: center;">
+								<td>
 									<!-- Bouton supprimer note, redirige vers méthode supprimer -->
 									<input type="submit" class="button btn btn-danger btn-md" data-toggle="modal" data-target="#fen_modal_<?=$mark->getIdApprentice(); ?>" value="Supprimer" />
 

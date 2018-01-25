@@ -9,8 +9,8 @@
 				<th>Nom</th>
 				<th>Prénom</th>
 				<th>Adresse Mail</th>
-				<th style="text-align: center;">Modification</th>
-				<th style="text-align: center;">Suppression</th>
+				<th>Modification</th>
+				<th>Suppression</th>
 			</tr>
 		</thead>
 
@@ -21,14 +21,14 @@
 				<td><?=$apprentice->getFirstName(); ?></td>
 				<td><?=$apprentice->getLastName(); ?></td>
 				<td><?=$apprentice->getEmail(); ?></td>
-				<td style="text-align: center;">
+				<td>
 					<!-- Bouton modifier apprenti, redirige vers méthode modifier -->
 					<form  action="?ctrl=apprentices&action=update" method="POST">
 						<input type="hidden" value="<?=$apprentice->getIdApprentice(); ?>" name="id_apprentice" />
 						<input type="submit" class="button btn btn-warning btn-md" value="Modifier" />
 					</form>
 				</td>
-				<td style="text-align: center;">
+				<td>
 
 					<!-- Bouton supprimer apprenti, redirige vers méthode supprimer -->
 					<!-- Insertion d'une fenêtre modale de confirmation à la suppression  #myModal -->
